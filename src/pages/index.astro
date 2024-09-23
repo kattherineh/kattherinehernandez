@@ -1,16 +1,80 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Katt HS">
+	<div class="text-center mb-12 py-10 mt-20">
+		<Image
+			src="/images/perfil.jpg"
+			alt="Kattherine Hernandez"
+			width={200}
+			height={200}
+			class="rounded-full border-4 border-white-500 mx-auto mb-6 border-gradient shadow-lg"
+		/>
+		<div class="h-40 rounded-lg text-clear flex flex-col items-center justify-center max-w-md mx-auto">
+			<div class="text-center text-gray-600">
+				<p>¡Hola!, Soy Kattherine Hernandez</p>
+				<br>
+			</div>
+			<div class="text-center text-gray-600">
+				<p>Breve recordatorio...</p>
+			</div>
+			<div class="text-center text-3xl">
+				<p>Cada error es una lección y cada lección te convierte en un guerrero más fuerte.</p>
+			</div>
+		</div>
+	</div>
+	<div>
+	<div class="max-w-3xl mx-auto">
+		<div class="text-center mb-12">
+			<h1 class="text-4xl font-bold text-orange-800 mb-2">Backend Developer</h1>
+			<p class="text-xl text-gray-600">Bienvenido(a) a mi portafolio profesional.</p>
+			<br>
+			<p class="text-xl text-gray-600">
+				Soy una entusiasta por el desarrollo web, por lo que aprovecho cada oportunidad para poder crecer
+				y aportar significativamente a la industria.
+			</p>
+		</div>
+	</div>
+	<div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+	<footer class="mt-6 flex items-center justify-center gap-x-6 my-2">
+		<button type="button">
+			<Image
+				src="/images/github.png"
+				alt="Logo Git"
+				width={200}
+				height={200}
+				class="h-10 w-auto px-3 py-2"
+			/>
+		</button>
+		<button type="button">
+			<Image
+				src="/images/linkedin.png"
+				alt="Logo Git"
+				width={200}
+				height={200}
+				class="h-10 w-auto px-3 py-2"
+			/>
+		</button>
+		<button type="button">
+			<Image
+				src="/images/correo.png"
+				alt="Logo Git"
+				width={200}
+				height={200}
+				class="h-10 w-auto px-3 py-2"
+			/>
+		</button>
+	</footer>
+</BaseLayout>
