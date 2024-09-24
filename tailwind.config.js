@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors:{
-        'background-blue': '#11071F',
+        'dark-blue': '#11071F',
         'header-blue': '#1A0B2E',
-        'clear': '#FFFFFF',
-        'hover': '#4c187754'
+        'clear': '#E4E1EE',
+        'hover': '#4c187754',
+        'big-letter': '#698aa9'
       },
       fontFamily: {
         preahvihear: ["Preahvihear", "sans-serif"]
