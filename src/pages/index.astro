@@ -14,14 +14,14 @@ import { Image } from "astro:assets";
 			class="rounded-3xl mx-auto mb-6 border-gradient shadow-lg md:mr-8 my-12"
 		/>
 		<div class="h-40 rounded-lg text-clear flex flex-col justify-center max-w-md mx-auto md:ml-8 md:text-left">
-			<div>
+			<div class="text-3xl">
 				<p>¡Hola!, Soy <span class="text-big-letter">Kattherine Hernandez</span></p>
 				<br>
 			</div>
 			<div class="text-gray-600">
 				<p>Breve recordatorio...</p>
 			</div>
-			<div class="text-3xl">
+			<div>
 				<p>Cada error es una lección y cada lección te convierte en un guerrero más <span class="text-big-letter">fuerte</span>.</p>
 			</div>
 		</div>
@@ -41,70 +41,248 @@ import { Image } from "astro:assets";
 	<div class="flex items-center justify-center gap-x-6">
 		<a href="#" class="text-sm font-semibold leading-6 text-big-letter">Más acerca de mí<span aria-hidden="true">→</span></a>	
 	</div>
-	<div class="max-w-3xl mx-auto my-10 px-5 text-clear">
+	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
 		<div class="mb-3">
-			<h1 class="text-xl font-bold text-big-letter mb-2 pt-0">Habilidades Blandas</h1>
+			<h2 class="text-xl font-bold text-big-letter mb-2 pt-0">Habilidades Blandas</h2>
 		</div>
-		<div>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-2">
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Inteligencia emocional	
+		<!-- Carousel starts here -->
+		<div id="animation-carousel" class="relative w-full" data-carousel="slide">
+			<!-- Carousel wrapper -->
+			<div class="relative h-200 overflow-hidden rounded-lg md:h-200">
+				<!-- Item 1 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 p-10 rounded-lg shadow-md transition-all duration-300">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Inteligencia emocional</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							A lo largo de mis experiencias académicas y profesionales, he aprendido a reconocer y 
+							gestionar mis emociones, lo que me permite mantener la calma y 
+							tomar decisiones acertadas en situaciones de alta presión. Esto también me ayuda a 
+							comprender y apoyar a los demás, creando un entorno de trabajo 
+							colaborativo y empático.
+						</p>
+					</section>
 				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Trabajo en equipo
+				<!-- Item 2 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 bg-clear p-10 rounded-lg shadow-md transition-all duration-300 max-h-full overflow-y-auto">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Trabajo en equipo</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							Valoro profundamente la colaboración, ya que sé que los mejores resultados surgen 
+							cuando se combinan las fortalezas de todos los miembros de un equipo. 
+							Mi experiencia en diversos proyectos me ha permitido desarrollarme como una 
+							compañera de trabajo confiable y abierta a las ideas de los demás, 
+							siempre buscando un equilibrio entre la cooperación y la iniciativa personal.
+						</p>
+					</section>
 				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Liderazgo
+				<!-- Item 3 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 bg-clear p-10 rounded-lg shadow-md transition-all duration-300 max-h-full overflow-y-auto">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Liderazgo</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							Como representante estudiantil y secretaria de finanzas, 
+							he tenido la oportunidad de liderar iniciativas que requieren organización, 
+							toma de decisiones y la habilidad para motivar a otros a alcanzar objetivos comunes.
+							Mi enfoque en el liderazgo está orientado hacia el servicio, inspirando a los demás 
+							a dar lo mejor de sí mismos.
+						</p>
+					</section>
+				</div>
+				<!-- Item 4 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 bg-clear p-10 rounded-lg shadow-md transition-all duration-300 max-h-full overflow-y-auto">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Ética laboral</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							Creo firmemente en la importancia de la integridad y la responsabilidad en el entorno 
+							laboral. Mantengo un alto nivel de compromiso con la calidad y la puntualidad en mis 
+							proyectos, siempre buscando soluciones honestas y eficientes para los desafíos que 
+							enfrento.
+						</p>
+					</section>				
+				</div>
+				<!-- Item 5 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 bg-clear p-10 rounded-lg shadow-md transition-all duration-300 max-h-full overflow-y-auto">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Comunicación asertiva</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							Una de mis habilidades clave es la capacidad para expresar mis ideas de manera clara 
+							y respetuosa. A lo largo de mis estudios y roles de liderazgo, he aprendido a 
+							comunicarme eficazmente tanto en situaciones cotidianas como en momentos críticos, 
+							siempre buscando soluciones constructivas.
+						</p>
+					</section>
+				</div>
+				<!-- Item 6 -->
+				<div class="hidden transition-opacity duration-500" data-carousel-item>
+					<section class="bg-ligth-purple px-20 py-10 bg-clear p-10 rounded-lg shadow-md transition-all duration-300 max-h-full overflow-y-auto">
+						<h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">Temperancia</span></h2>
+						<p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+							Desde temprana edad, he gestionado responsabilidades financieras, lo que me ha ayudado 
+							a desarrollar una habilidad única para mantener la calma y ser prudente al 
+							tomar decisiones importantes. Esta capacidad para actuar con moderación 
+							ha sido clave en mi vida personal y profesional.
+						</p>
+					</section>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-2">
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Ética laboral
-				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Comunicación asertiva
-				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Temperancia
-				</div>
-			</div>
+			<!-- Slider controls -->
+			<button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+					<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+					</svg>
+					<span class="sr-only">Previous</span>
+				</span>
+			</button>
+			<button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+					<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+					</svg>
+					<span class="sr-only">Next</span>
+				</span>
+			</button>
 		</div>
+		<!-- Carousel ends here -->
 	</div>
-	<div class="max-w-3xl mx-auto my-10 px-5 text-clear">
+
+	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
 		<div class="mb-3">
-			<h1 class="text-xl font-bold text-big-letter mb-2 pt-0">Lenguajes de Programación</h1>
+			<h2 class="text-xl font-bold text-big-letter mb-2 pt-0">Stack de tecnologías</h2>
 		</div>
-		<div>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-2">
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Inteligencia emocional	
+		<ul class="list-disc pl-5">
+			<li class="text-clear">
+				<span>Lenguajes de desarrollo</span>
+				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
+					<Image
+						src="/images/js.png"
+						alt="Logo JS"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				<div>
+					<Image
+						src="/images/java.png"
+						alt="Logo Java"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
 				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Trabajo en equipo
+				<div>
+					<Image
+						src="/images/piton.png"
+						alt="Logo Python"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
 				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Liderazgo
+				</div>
+				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
+					<Image
+						src="/images/html-5.png"
+						alt="Logo Html"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				<div>
+					<Image
+						src="/images/css-3.png"
+						alt="Logo CSS"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				</div>
+				</div>
+				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
+					<Image
+						src="/images/sql.png"
+						alt="Logo sql"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				</div>
+			</li>
+			<li class="text-clear">
+				<span>Frameworks de desarrollo</span> 
+				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				<div>
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="border-10 h-20 w-auto px-3 py-2"
+						style="border-radius:100%"
+					/>
+				</div>
+				<div>
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="border-10 h-20 w-auto px-3 py-2"
+						style="border-radius:100%"
+					/>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-2">
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Ética laboral
+			</li>
+			<li class="text-clear">
+				<span>Otras herramientas</span> 
+				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="h-20 w-auto px-3 py-2 rounded-full"
+						style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+					/>
+				<div>
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="border-10 h-20 w-auto px-3 py-2"
+						style="border-radius:100%"
+					/>
 				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Comunicación asertiva
-				</div>
-				<div class="h-auto text-center rounded-lg bg-gray-200 text-dark-blue">
-					Temperancia
+				<div>
+					<Image
+						src="/images/github.png"
+						alt="Logo Git"
+						width={400}
+						height={400}
+						class="border-10 h-20 w-auto px-3 py-2"
+						style="border-radius:100%"
+					/>
 				</div>
 			</div>
-		</div>
+			</li>
+		</ul>
 	</div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-	<footer class="mt-6 flex items-center justify-center gap-x-6 my-2">
+	<footer class="bg-header-footer-blue mt-6 flex items-center justify-center gap-x-6 mt-2 mb-0">
 		<button type="button">
 			<Image
 				src="/images/github.png"
@@ -134,3 +312,42 @@ import { Image } from "astro:assets";
 		</button>
 	</footer>
 </BaseLayout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const carouselItems = document.querySelectorAll('[data-carousel-item]');
+        const prevButton = document.querySelector('[data-carousel-prev]');
+        const nextButton = document.querySelector('[data-carousel-next]');
+        
+        let currentIndex = 0;
+
+        // Inicializa el carrusel
+        function updateCarousel() {
+            carouselItems.forEach((item, index) => {
+                item.classList.add('hidden');
+                if (index === currentIndex) {
+                    item.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Función para ir al siguiente item
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            updateCarousel();
+        }
+
+        // Función para ir al item anterior
+        function prevItem() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextButton?.addEventListener('click', nextItem);
+        prevButton?.addEventListener('click', prevItem);
+
+        // Inicializa el carrusel al cargar
+        updateCarousel();
+    });
+</script>
