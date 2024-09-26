@@ -1,0 +1,24 @@
+---
+import Image from "astro/components/Image.astro";
+
+export interface Props {
+    href: string,
+    src: string,
+    alt: string,
+    target?: string
+}
+
+const {href, src, alt, target} = Astro.props;
+---
+
+<a href={href} target={target}>
+    <button type="button" >
+        <Image
+            src={src}
+            alt={alt}
+            width={200}
+            height={200}
+            class="h-10 w-auto px-3 py-2"
+        />
+    </button>
+</a>

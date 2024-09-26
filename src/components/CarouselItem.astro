@@ -1,0 +1,17 @@
+---
+export interface Props {
+    title: string,
+    text: string
+}
+
+const {title, text} = Astro.props;
+---
+
+<div class="hidden transition-opacity duration-500" data-carousel-item>
+    <section class="bg-ligth-purple px-20 py-10 p-10 rounded-lg shadow-md transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-dark-blue mb-4"><span data-lang="es">{title}</span></h2>
+        <p style="height: 150px;" class="text-dark-blue overflow-y-auto ">
+            {text}
+        </p>
+    </section>
+</div>
