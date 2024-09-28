@@ -1,0 +1,24 @@
+---
+import Image from "astro/components/Image.astro"
+
+export interface Props{
+    src: string,
+    alt: string,
+    text: string
+}
+
+const {src, alt, text} = Astro.props;
+---
+
+<div class="text-clear flex p-6 items-center">
+    <div>
+        <Image
+            src={src}
+            alt={alt}
+            width={200}
+            height={200}
+            class="h-16 w-auto px-3 py-2"
+        />
+    </div>
+    <div>{text}</div>
+</div>y

@@ -3,51 +3,33 @@ import Image from 'astro/components/Image.astro';
 
 export interface Props {
     title: string,
-    items: {src: string, alt:string, row:number}[]
+    items: { src: string, alt: string, row: number }[]
 }
 
 const { title, items } = Astro.props;
 
-let cantRows = 0;
-let lineNumber = -1;
-
-for (const item of items) {
-    if (item.row !== lineNumber) {
-        cantRows++;
-        lineNumber = item.row;
-    }
-}
-
-console.log(cantRows)
+// Usamos un Set para encontrar las filas únicas
+const uniqueRows = [...new Set(items.map(item => item.row))];
 ---
-
 <li class="text-clear">
     <span>{title}</span>
 
-    {/* Iterar sobre las filas */}
     {
-        
-        Array.from({ length: cantRows }).map((_, i) => (
+        uniqueRows.map((row) => (
             <div class="mt-6 flex items-center justify-center gap-x-6 my-2">
-                {items.map((item) => {
-                    if (item.row === i) {
-                        return (
-                            <div>
-                                <Image
-                                    src={item.src}
-                                    alt={item.alt}
-                                    width={400}
-                                    height={400}
-                                    class="h-20 w-20 px-3 py-2 rounded-full"
-                                    style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-                                />
-                            </div>
-                        );
-                    }
-                    return null; // Devuelve null si no se cumple la condición
-                })}
+                {items.filter(item => item.row === row).map((item) => (
+                    <div>
+                        <Image
+                            src={item.src}
+                            alt={item.alt}
+                            width={400}
+                            height={400}
+                            class="h-20 w-20 px-3 py-2 rounded-full"
+                            style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
+                        />
+                    </div>
+                ))}
             </div>
-
         ))
     }
 </li>

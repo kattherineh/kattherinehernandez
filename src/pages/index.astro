@@ -1,10 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
 import Presentacion from "../components/Presentacion.astro";
 import CarouselHabilidadesBlandas from "../components/CarouselHabilidadesBlandas.astro";
 import ListItemTechnologies from "../components/ListItemTechnologies.astro";
-import Footer from "../components/Footer.astro";
 
 const icons = [
 	[
@@ -39,12 +37,64 @@ const icons = [
 			row: 2
 		}
 	],
-	[],
-	[]
+	[
+		{
+			src: "/images/bootstrap.png",
+			alt: "img bootstrap",
+			row: 1
+		},
+		{
+			src: "/images/express.png",
+			alt: "img express",
+			row: 1
+		},
+		{
+			src: "/images/astro.png",
+			alt: "img astro",
+			row: 1
+		},
+		{
+			src: "/images/react.png",
+			alt: "img react",
+			row: 1
+		},
+		{
+			src: "/images/laravel.png",
+			alt: "img laravel",
+			row: 2
+		},
+		{
+			src: "/images/springboot.png",
+			alt: "img springboot",
+			row: 2
+		}
+	],
+	[
+		{
+			src: "/images/office.png",
+			alt: "img office",
+			row: 1
+		},
+		{
+			src: "/images/virtualbox.png",
+			alt: "img virtualbox",
+			row: 1
+		},
+		{
+			src: "/images/linux.png",
+			alt: "img linux",
+			row: 1
+		},
+		{
+			src: "/images/github.png",
+			alt: "img github",
+			row: 1
+		}
+	],
 ]
 ---
 
-<BaseLayout title="Katt HS">
+<BaseLayout showFooter={true} title="Katt HS">
 	<Presentacion></Presentacion>
 	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
 		<div class="mb-3">
@@ -52,128 +102,16 @@ const icons = [
 		</div>
 		<CarouselHabilidadesBlandas></CarouselHabilidadesBlandas>
 	</div>
-
 	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
 		<div class="mb-3">
 			<h2 class="text-xl font-bold text-big-letter mb-2 pt-0">Stack de tecnologías</h2>
 		</div>
 		<ul class="list-disc pl-5">
 			<ListItemTechnologies items={icons[0]} title="Lenguajes de desarrollo"></ListItemTechnologies>
-			<li class="text-clear">
-				<span>Frameworks de desarrollo</span> 
-				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
-					<div>
-						<Image
-							src="/images/bootstrap.png"
-							alt="Logo Bootstrap"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/express.png"
-							alt="Logo Express"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/astro.png"
-							alt="Logo Astro"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/react.png"
-							alt="Logo React"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-				</div>
-				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
-					<div>
-						<Image
-							src="/images/laravel.png"
-							alt="Logo Laravel"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/springboot.png"
-							alt="Logo Spring boot"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-				</div>
-			</li>
-			<li class="text-clear">
-				<span>Otras herramientas</span> 
-				<div class="mt-6 flex items-center justify-center gap-x-6 my-2">
-					<div>
-						<Image
-							src="/images/office.png"
-							alt="Logo office"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/virtualbox.png"
-							alt="Logo virtualbox"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/linux.png"
-							alt="Logo linux"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/images/github.png"
-							alt="Logo github"
-							width={400}
-							height={400}
-							class="h-20 w-20 px-3 py-2 rounded-full"
-							style="border-style: solid; box-shadow: 0 0 1px rgba(168, 85, 247, 0.7), 0 0 2px rgba(252, 165, 165, 0.5);"
-						/>
-					</div>
-				</div>
-			</li>
+			<ListItemTechnologies items={icons[1]} title="Frameworks de desarrollo"></ListItemTechnologies>
+			<ListItemTechnologies items={icons[2]} title="Otras herramientas"></ListItemTechnologies>
 		</ul>
 	</div>
-	<Footer></Footer>
 </BaseLayout>
 
 <script>
