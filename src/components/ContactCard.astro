@@ -12,14 +12,14 @@ export interface Props{
 const {src, alt, text, href, target} = Astro.props;
 ---
 
-<a class="text-clear flex items-center" href={href} target={target}>
-    <div>
+<a style="display: flex; flex-direction: column; align-items: center;" class="text-clear p-2" href={href} target={target}>
+    <div class="text-center">
         <Image
             src={src}
             alt={alt}
             width={200}
             height={200}
-            class="h-16 w-auto px-3 py-2 rounded-full"
+            class="h-16 w-auto rounded-full"
         />
     </div>
     <div>{text}</div>
