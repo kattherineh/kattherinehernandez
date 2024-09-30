@@ -1,8 +1,0 @@
-<a href="https://www.flaticon.es/iconos-gratis/java" title="java iconos">Java iconos creados por Pixel perfect - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/java" title="java iconos">Java iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/archivo-de-python" title="archivo de python iconos">Archivo de python iconos creados por Flat Icons - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/html-5" title="html 5 iconos">Html 5 iconos creados por Pixel perfect - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/sql" title="sql iconos">Sql iconos creados por Vectorslab - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/linux" title="linux iconos">Linux iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/github" title="github iconos">Github iconos creados por riajulislam - Flaticon</a>
