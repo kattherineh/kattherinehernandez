@@ -4,21 +4,23 @@ import Image from "astro/components/Image.astro"
 export interface Props{
     src: string,
     alt: string,
-    text: string
+    text: string,
+    href: string,
+    target: string
 }
 
-const {src, alt, text} = Astro.props;
+const {src, alt, text, href, target} = Astro.props;
 ---
 
-<div class="text-clear flex p-6 items-center">
+<a class="text-clear flex items-center" href={href} target={target}>
     <div>
         <Image
             src={src}
             alt={alt}
             width={200}
             height={200}
-            class="h-16 w-auto px-3 py-2"
+            class="h-16 w-auto px-3 py-2 rounded-full"
         />
     </div>
     <div>{text}</div>
-</div>y
+</a>

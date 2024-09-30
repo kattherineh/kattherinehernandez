@@ -1,0 +1,32 @@
+---
+import Image from "astro/components/Image.astro"
+
+export interface Props{
+    src: string,
+    alt: string,
+    title: string,
+    description: string
+}
+
+const {src, alt, title, description} = Astro.props;
+---
+
+<a href="/">
+    <section class="bg-ligth-purple p-6 m-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+        <div class="flex align-items-center">
+            <Image
+                src={src}
+                alt={alt}
+                width={200}
+                height={200}
+                class="rounded-2xl h-26 w-auto mx-auto mb-6 border-gradient shadow-lg mb-12"
+            />
+        </div>
+        <h2 class="text-2xl font-semibold text-dark-blue mb-4">
+            <span>{title}</span>
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+            {description}
+        </p>
+    </section>
+</a>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InfoCard from '../components/InfoCard.astro';
+
+export async function getStaticPaths() {
+    const pages = [
+    {
+        type_info: undefined,
+        items: []
+    },
+    {
+        type_info: "projects",
+        items: [
+            {
+                title: 'Datawarehouse Oracle para rubro de turismo',
+                description: `Este proyecto consistió en la implementación de un data warehouse en Oracle, que se conecta a bases de datos de Oracle, SQL Server y MongoDB. Su objetivo es centralizar y analizar datos provenientes de diversas fuentes para facilitar la toma de decisiones. `,
+                src: '/images/bd.png',
+                alt: 'img dwh'
+            },
+            {
+                title: 'Traductor de números de un formato a otro',
+                description: `Este proyecto consiste en la implementación de un traductor versátil que acepta números en diversos formatos, incluyendo romano, decimal, octal, hexadecimal, binario y morse, y los convierte a cualquier otro formato seleccionado por el usuario.`,
+                src: '/images/desarrollo.png',
+                alt: 'img traductor'
+            },
+            {
+                title: 'Backend - Simulación de aplicación para contratación de servicios de transporte. (Uber)',
+                description: `Este proyecto contiene endpoints para la lógica de negocios de una aplicación de contratación de servicios de transporte similar a Uber.`,
+                src: '/images/desarrollo.png',
+                alt: 'img traductor'
+            },
+            {
+                title: 'Consumo de web services desde Laravel PHP utilizando Guzzle',
+                description: `En esta ocasión, tuve la oportunidad de compartir con mis compañeros sobre este tema y desarrollamos un ejercicio práctico. Esta actividad me permitió profundizar en el funcionamiento del modelo cliente-servidor, utilizando Guzzle como cliente para consumir servicios de manera efectiva.`,
+                src: '/images/desarrollo.png',
+                alt: 'img traductor'
+            },
+            {
+                title: 'Base de datos para un ERP',
+                description: `En este proyecto, trabajé con SQL Server para implementar un sistema de gestión de bases de datos que incluye el uso de DDL (Data Definition Language), DML (Data Manipulation Language), procedimientos almacenados y triggers.`,
+                src: '/images/bd.png',
+                alt: 'img erp'
+            }
+        ],
+    },
+    {
+        type_info: "experience",
+        items: [
+            {
+                title: 'Becaria del programa Mujer Digital (JA Americas)',
+                description: `Mujer Digital es un programa de capacitación y empleabilidad diseñado 
+                        para promover la participación femenina en la economía digital. 
+                        Me enteré de esta iniciativa a través de las redes sociales y, motivada por la experiencia 
+                        positiva de algunas compañeras de la universidad que ya formaban parte, decidí aplicar 
+                        en febrero de 2024.`,
+                src: '/images/formacion.png',
+                alt: 'img md'
+            }
+        ]
+    },
+    ];
+    return pages.map(({ type_info, items}) => {
+    return {
+        params: { type_info },
+        props: { items},
+    };
+    });
+    }
+
+const {items} = Astro.props;
+
+---
+
+<BaseLayout showFooter={false} title="Proyectos">
+    <div class="max-w-3xl mx-auto">
+        {
+            items.map((item) => (
+                <InfoCard src={item.src} alt={item.alt} description={item.description} title={item.title}></InfoCard>
+            ))
+        }
+    </div>
+</BaseLayout>
