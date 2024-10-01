@@ -60,20 +60,10 @@ const { Content} = await entry.render();
 </BaseLayout>
 
 <style is:global>
-    .prose h1 { @apply text-base font-bold text-big-letter mb-4 mt-8; }
     .prose h2 { @apply text-base font-semibold text-big-letter mb-4 mt-8; }
     .prose h3 { @apply text-base font-semibold text-big-letter mb-3 mt-6; }
     .prose p { @apply mb-4 text-clear; }
     .prose ul { @apply list-disc list-inside mb-4; }
-    .prose ol { @apply list-decimal list-inside mb-4; }
     .prose li { @apply mb-2; }
-    .prose strong { @apply text-orange-900; }
     .prose a { @apply text-orange-600 hover:text-orange-800 underline; }
-    .prose code { @apply bg-orange-100 text-orange-800 px-1 py-0.5 rounded; }
-    .prose pre { @apply bg-gray-100 p-4 rounded-lg overflow-x-auto; }
-    .prose pre code { @apply bg-transparent text-gray-800; }
-    .prose blockquote { @apply border-l-4 border-orange-500 pl-4 italic text-gray-700; }
-    .prose table { @apply w-full border-collapse border border-orange-200 mb-4; }
-    .prose th, .prose td { @apply border border-orange-200 p-2; }
-    .prose th { @apply bg-orange-100 font-semibold; }
 </style>
