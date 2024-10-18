@@ -1,0 +1,83 @@
+---
+title: 'Infraestructura SC'
+header_text: 'Infraestructura de sistema contable en Azure utilizando Terraform'
+src: '/images/terraformar.png'
+alt: 'img terraform'
+---
+
+Durante el proceso de despliegue de una infraestructura en Azure utilizando Terraform, aprendí a 
+manejar de manera eficiente la creación y configuración de recursos en la nube a través de código. 
+
+Terraform me permitió definir la infraestructura como código (IaC), lo que facilitó la automatización y 
+estandarización de entornos, asegurando que los despliegues fueran repetibles y consistentes. 
+Aprendí a crear recursos como máquinas virtuales, redes virtuales y almacenamiento, así como a gestionar 
+configuraciones de forma modular para mantener la flexibilidad y la reutilización del código. 
+
+El próposito de este sistema contable es proporcionar a una empresa la herramienta necesaria para gestionar de 
+manera eficiente la información. Se busca seccionar el tráfico de datos, de manera que la información transaccional 
+del usuario fluya por una parte y la confidencial se mantenga así, confidencial.
+
+## Diagrama de arquitectura
+![Descripción de la imagen](/images/diagrama.png)
+
+En términos generales, el despliegue se hizo configurando cada recurso siguiendo este orden:
+
+### 1. Configuración de la red.
+He configurado una red virtual (VNet) en Azure, que facilita la segmentación de la red 
+en diferentes subredes, garantizando una comunicación controlada entre los recursos. La red virtual se 
+crea con un rango de direcciones 10.0.0.0/16, y está vinculada a un grupo de recursos 
+específico
+
+La VNet alberga varias subredes, cada una con un propósito específico:
+
+- Subred de la Base de Datos: (10.0.1.0/24)
+- Subred de Almacenamiento: (10.0.2.0/24)
+- Subred de Aplicaciones Web para Front-Office: (10.0.3.0/24)
+- Subred de Funciones para Front-Office: (10.0.4.0/24)
+- Subred de Aplicaciones Web para Back-Office: (10.0.5.0/24)
+- Subred de Funciones para Back-Office: (10.0.6.0/24)
+
+### 2. Creación y configuración de servicio de base de datos.
+Implementé un servidor SQL en Azure, asegurando una administración centralizada de las bases de datos
+para el front-office y back-office. Las bases de datos utilizan la SKU S0 para equilibrar rendimiento y costos. 
+Además, configuré un Private Endpoint para mantener la conexión segura entre el servidor y las bases de datos, 
+utilizando una zona DNS privada para el enrutamiento interno, lo que garantiza que las comunicaciones se mantengan 
+dentro de la red virtual y no expongan datos a Internet.
+
+### 3. Creación y condiguración de almacenamiento de Azure.
+Implementé una cuenta de almacenamiento en Azure con replicación local (LRS), diseñada para gestionar archivos
+de usuarios y facturas a través de contenedores *Blob* con acceso privado para mantener la seguridad. También
+configuré una cola de almacenamiento para procesar solicitudes de manera asíncrona. Para asegurar que las
+comunicaciones se mantengan dentro de la red, utilicé *Private Endpoints* y una zona DNS privada, permitiendo
+una conexión segura y controlada entre los servicios de almacenamiento y la red virtual.
+
+### 4. Creación y configuración de webbaps y function apps para Front-Office y Back-Office
+También, he configurado un plan de servicio en Azure para alojar tanto el frontend como el backend del sistema, 
+desplegándolos como Linux Web Apps y asegurando su conectividad con la red virtual mediante conexiones Swift, 
+lo cual permite un enrutamiento seguro entre ambos componentes y la red interna.
+
+Además, para manejar procesos automatizados, configuré una Function App que también se conecta a la red 
+virtual a través de un Private Endpoint, garantizando que las comunicaciones se mantengan seguras y limitadas al
+entorno privado. Esta función está configurada para interactuar con una cola de almacenamiento que procesa 
+solicitudes de manera asíncrona, lo cual facilita la integración con el frontend y backend a través de las 
+variables definidas en App Settings.
+
+Para gestionar el tráfico y las resoluciones DNS, configuré una zona DNS privada con registros que apuntan 
+a la dirección IP de la Function App, asegurando la conectividad interna entre los diferentes servicios. 
+Se añadió un registro A para el nombre de la función, lo que facilita la resolución de nombres en el entorno 
+privado. Lo anterior para ambas capas del sistema.
+
+Finalmente, implementé un registro de contenedores privado (ACR), que permite tanto al frontend como al 
+backend extraer imágenes Docker de manera segura, asegurando que cada componente se mantenga actualizado 
+con la última versión de su contenedor.
+
+
+Repositorio: https://github.com/katerinmayely/sist-cont-app.terraform.git
+
+Vídeo explicativo de la infraestructura: https://youtu.be/FmgQnktrDLY
+
+## Tecnologías utilizadas:  
+
+- Azure
+- Terraform 
+- Github

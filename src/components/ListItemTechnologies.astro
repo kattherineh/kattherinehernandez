@@ -13,7 +13,6 @@ const uniqueRows = [...new Set(items.map(item => item.row))];
 ---
 <li class="text-clear">
     <span>{title}</span>
-
     {
         uniqueRows.map((row) => (
             <div class="mt-6 flex items-center justify-center gap-x-6 my-2">
