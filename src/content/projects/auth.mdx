@@ -1,39 +1,48 @@
 ---
 title: 'Auth'
 header_text: 'Sistema de Autenticación desplegado en Azure'
-src: '/images/auto-crecimiento.png'
-alt: 'img auto-crecimiento'
+src: '/images/azure.png'
+alt: 'img azure'
 ---
 
 Este proyecto consistió en la implementación de un sistema básico para Autenticación de usuarios
 utilizando Firebase como gestor de los mismos.
 
-Para iniciar sesión, el usuario debe estar registrado. El usuario solo podrá realizar acciones en el sistema si se encuentra activo,
+Para iniciar sesión, el usuario debe estar registrado. Además, solo podrá realizar acciones en el sistema si se encuentra activo,
 para ello pasará por un proceso de activación.
 
-A través de esta experiencia, adquirí varias habilidades clave: 
+El proceso de activación de un nuevo usuario, se lleva a cabo cuando este intente iniciar sesión, al validarse su estado
+de inactividad en el sistema, se le redirige a una página donde ingresará el código de activación que se le habrá enviado 
+por correo electrónico.
 
-- Despliegue de aplicaciones web utilizando los servicios de Azure.
->Entre esos servicios destacan: App services plan, App services, Azure SQL, Azure function apps,
->storage accounts (utilizando los queue storage), entre otros.
+### Diagrama de la base de datos
+![Diagrama de la base de datos](/images/proyecto_expertos.drawio.svg)
 
-- Desarrollo de servicios con Fast API 
->El backend fue desarrollado con este framework de Python.
+Una vez activado, el usuario puede iniciar sesión y cada paso que dé en el sistema será monitoreado y gestionado por
+medio de un token.
 
-- Interfaz gráfica con Next.js
->EL frontend fue desarrollado con ese framework de Node.js.
+Cuando el usuario haya iniciado sesión visualizará una interfaz como esta:
+
+![Interfaz grafica del sistema](/images/EXPERTOS.png)
+
+Sería diferente en caso de que el usuario no tenga cuentas registradas, pues le mostraría un mensaje notificándoselo.
+
+Al dar clic en una de las cuentas, se desplegarán las transacciones de la misma. Cada transacción puede tener uno o varios tags 
+y al posar el cursor sobre cualquiera de ellos, se mostrará cuántas transacciones hizo con ese tag.
 
 ## Repositorios:
-- bd: https://github.com/katerinmayely/db.cont.sist.app.git
-- ui: https://github.com/katerinmayely/ui.cont.sist.app.git
-- api: https://github.com/katerinmayely/api.cont.sis.app..git
-- function app: https://github.com/katerinmayely/queue.function.cont.sist.app.git
+- Base de datos: https://github.com/katerinmayely/db.cont.sist.app.git
+- UI: https://github.com/katerinmayely/ui.cont.sist.app.git
+- FastAPI API: https://github.com/katerinmayely/api.cont.sis.app..git
+- GraphQL API: https://github.com/katerinmayely/graphql.sist.cont.app.git
+- Function App: https://github.com/katerinmayely/queue.function.cont.sist.app.git
 
 ## Tecnologías utilizadas:  
 
 - Framework Next.js, Node.js
 - Framework Fast API, Python
-- Pyenv, Python
+- Framework Express, Node.js
+- GraphQL
 - Azure SQL Server 
 - Azure Data Studio
 - Azure Storage Account
