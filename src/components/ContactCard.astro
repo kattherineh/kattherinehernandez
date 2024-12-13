@@ -12,15 +12,15 @@ export interface Props{
 const {src, alt, text, href, target} = Astro.props;
 ---
 
-<a style="display: flex; flex-direction: column; align-items: center;" class="text-clear p-2" href={href} target={target}>
-    <div class="text-center">
+<a style="display: flex; justify-content: start; width: 35%;" class="text-clear p-2" href={href} target={target}>
+    <div class="">
         <Image
             src={src}
             alt={alt}
-            width={200}
-            height={200}
-            class="h-16 w-auto rounded-full"
+            width={100}
+            height={100}
+            class="h-8 w-auto rounded-full"
         />
     </div>
-    <div>{text}</div>
+    <div class="ml-10">{text}</div>
 </a>
