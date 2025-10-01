@@ -1,0 +1,88 @@
+[
+    {
+        "type_info": "projects",
+        "items": [
+            {
+                "title": "Sistema de Autenticación desplegado en Azure",
+                "description": "Registro e inicio de sesión de usuarios auxiliado del servicio de Google, Firebase. En este proyecto realizo la simulación de un sistema básico para que el usuario pueda visualizar el movimiento de sus cuentas financieras a través de transacciones.",
+                "mdx": "auth"
+            },
+            {
+                "title": "Infraestructura de Sistema Contable en Azure utilizando Terraform",
+                "description": "Muestra cómo estarán conectados los recursos y cuál es el flujo de datos entre ellos (incluye App Service Plans, VNets, Subnets, Azure SQL, Storage Accounts, etc.)",
+                "mdx": "infraestructura_azure_terraform"
+            },
+            {
+                "title": "Datawarehouse Oracle para rubro de turismo",
+                "description": "Este proyecto consistió en la implementación de un data warehouse en Oracle, que se conecta a bases de datos de Oracle, SQL Server y MongoDB. Su objetivo es centralizar y analizar datos provenientes de diversas fuentes para facilitar la toma de decisiones.",
+                "mdx": "dwh"
+            },
+            {
+                "title": "Traductor de números de un formato a otro",
+                "description": "Este proyecto consiste en la implementación de un traductor versátil que acepta números en diversos formatos, incluyendo romano, decimal, octal, hexadecimal, binario y morse, y los convierte a cualquier otro formato seleccionado por el usuario.",
+                "mdx": "traductor"
+            },
+            {
+                "title": "Backend - Simulación de aplicación para contratación de servicios de transporte. (Uber)",
+                "description": "Este proyecto contiene endpoints para la lógica de negocios de una aplicación de contratación de servicios de transporte similar a Uber.",
+                "mdx": "uber_backend"
+            },
+            {
+                "title": "Consumo de web services desde Laravel PHP utilizando Guzzle",
+                "description": "En esta ocasión, tuve la oportunidad de compartir con mis compañeros sobre este tema y desarrollamos un ejercicio práctico. Esta actividad me permitió profundizar en el funcionamiento del modelo cliente-servidor, utilizando Guzzle como cliente para consumir servicios de manera efectiva.",
+                "mdx": "web_services"
+            },
+            {
+                "title": "Base de datos para un ERP",
+                "description": "En este proyecto, trabajé con SQL Server para implementar un sistema de gestión de bases de datos que incluye el uso de DDL (Data Definition Language), DML (Data Manipulation Language), procedimientos almacenados y triggers.",
+                "alt": "img erp",
+                "mdx": "erp_bd"
+            }
+        ]
+    },
+    {
+        "type_info": "experience",
+        "items": [
+            {
+                "title": "Becaria del programa Mujer Digital (JA Americas)",
+                "description": "Mujer Digital es un programa de capacitación y empleabilidad diseñado para promover la participación femenina en la economía digital. Me enteré de esta iniciativa a través de las redes sociales y, motivada por la experiencia positiva de algunas compañeras de la universidad que ya formaban parte, decidí aplicar en febrero de 2024.",
+                "mdx": "mujer_digital"
+            },
+            {
+                "title": "Python Essentials 1, Cisco",
+                "description": "Al completar el curso de Python Essentials 1, he adquirido habilidades fundamentales en programación que me permiten contribuir al desarrollo de software. Mis conocimientos abarcan desde los conceptos básicos hasta la creación de aplicaciones simples en Python, lo que me posiciona como una desarrolladora en formación.",
+                "mdx": "python1"
+            },
+            {
+                "title": "Python Essentials 2, Cisco",
+                "description": "Como profesional en desarrollo de software, ofrezco una sólida base en Python, respaldada por las habilidades adquiridas en el curso de Python Avanzado.",
+                "mdx": "python2"
+            },
+            {
+                "title": "Introducción a la Ciberseguridad, Cisco",
+                "description": "Este curso introductorio de Ciberseguridad me proporcionó una comprensión sólida de los conceptos fundamentales para proteger mi vida digital y conocer los principales desafíos de seguridad que enfrentan empresas, gobiernos e instituciones educativas.",
+                "mdx": "ciberseguridad"
+            },
+            {
+                "title": "JavaScript Moderno, Udemy",
+                "description": "Al completar el curso de JavaScript moderno, he adquirido una comprensión fundamental del lenguaje y sus aplicaciones. Puedo ofrecer a la industria la capacidad de desarrollar aplicaciones web desde cero, utilizando conceptos básicos como tipos de datos, objetos y manipulación del DOM.",
+                "mdx": "javascript"
+            },
+            {
+                "title": "Explorando tecnologías emergentes, IBM",
+                "description": "A lo largo de mi formación, he completado varios cursos en áreas clave de tecnología, incluyendo Cloud Computing, Inteligencia Artificial, Ciberseguridad, Ciencia de Datos, Blockchain e Internet de las Cosas (IoT).",
+                "mdx": "tecnologias"
+            },
+            {
+                "title": "Fundamentos de programación, Udemy",
+                "description": "Después de completar el curso de Fundamentos de Programación, tengo una sólida comprensión de las bases del desarrollo de software.",
+                "mdx": "fundamentos"
+            },
+            {
+                "title": "Git y Github de cero a experto, Udemy",
+                "description": "Al finalizar el curso de Git, he desarrollado una comprensión sólida de esta herramienta esencial en el desarrollo de software. Aprendí a instalar y utilizar Git de manera efectiva, tanto en entornos gráficos como en la terminal, lo que me permite gestionar proyectos de manera más organizada.",
+                "mdx": "github"
+            }
+        ]
+    }
+]

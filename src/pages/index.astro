@@ -1,149 +1,137 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Presentacion from "../components/Presentacion.astro";
-import CarouselHabilidadesBlandas from "../components/CarouselHabilidadesBlandas.astro";
-import ListItemTechnologies from "../components/ListItemTechnologies.astro";
-
-const icons = [
-	[
-		{
-			src: "/images/js.svg",
-			alt: "img js",
-			row: 1
-		},
-		{
-			src: "/images/java.svg",
-			alt: "img java",
-			row: 1
-		},
-		{
-			src: "/images/piton.png",
-			alt: "img python",
-			row: 1
-		},
-		{
-			src: "/images/html5.svg",
-			alt: "img html",
-			row: 2
-		},
-		{
-			src: "/images/css-3.png",
-			alt: "img css",
-			row: 2
-		}
-	],
-	[
-		{
-			src: "/images/bootstrap.svg",
-			alt: "img bootstrap",
-			row: 1
-		},
-		{
-			src: "/images/expressjs.svg",
-			alt: "img express",
-			row: 1
-		},
-		{
-			src: "/images/astro.png",
-			alt: "img astro",
-			row: 1
-		},
-		{
-			src: "/images/laravel.svg",
-			alt: "img laravel",
-			row: 2
-		},
-		{
-			src: "/images/spring.svg",
-			alt: "img springboot",
-			row: 2
-		},
-		{
-			src: "/images/next.svg",
-			alt: "img next",
-			row: 2
-		}
-	],
-	[
-		{
-			src: "/images/office.png",
-			alt: "img office",
-			row: 1
-		},
-		{
-			src: "/images/linux.svg",
-			alt: "img linux",
-			row: 1
-		},
-		{
-			src: "/images/github.svg",
-			alt: "img github",
-			row: 1
-		},
-		{
-			src: "/images/terraform.png",
-			alt: "img terraform",
-			row: 2
-		}
-	],
-]
+import icons from './data/index_icons.json' assert { type: 'json' };
+import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 ---
 
-<BaseLayout showFooter={true} title="Katt HS">
+<BaseLayout showFooter={true} title="Portafolio | Kattherine Hernandez">
 	<Presentacion></Presentacion>
-	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
-		<div class="mb-3">
-			<h2 class="text-xl font-bold text-big-letter mb-2 pt-0">Habilidades Blandas</h2>
+	<div class="max-w-6xl mx-auto my-12 px-5 text-clear">
+		<div class="mb-12 text-center">
+			<h5 class="text-xl font-bold text-big-letter mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+				Habilidades Blandas
+			</h5>
+			<p class="text-lg text-gray-300 max-w-2xl mx-auto">
+				Competencias interpersonales que me permiten trabajar efectivamente en equipo y liderar proyectos
+			</p>
 		</div>
-		<CarouselHabilidadesBlandas></CarouselHabilidadesBlandas>
+
+		<!-- Grid de habilidades -->
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+			
+			<!-- Habilidad 1: Comunicación Efectiva -->
+			<div class="group relative bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+				<div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+				
+				<div class="relative">
+					<!-- Número -->
+					<div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
+						1
+					</div>
+					
+					<!-- Imagen -->
+					<div class="mb-6 overflow-hidden rounded-xl">
+						<img 
+							src="/images/meinpublic.jpg" 
+							alt="Comunicación efectiva"
+							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							style="box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3);"
+						/>
+					</div>
+					
+					<!-- Contenido -->
+					<h3 class="text-xl font-semibold text-purple-300 mb-3">Comunicación Efectiva</h3>
+					<p class="text-gray-300 leading-relaxed">
+						Capacidad para expresar ideas claramente y escuchar activamente a los demás, facilitando el intercambio de información y la colaboración.
+					</p>
+				</div>
+			</div>
+
+			<!-- Habilidad 2: Trabajo en Equipo -->
+			<div class="group relative bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+				<div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+				
+				<div class="relative">
+					<!-- Número -->
+					<div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
+						2
+					</div>
+					
+					<!-- Imagen -->
+					<div class="mb-6 overflow-hidden rounded-xl">
+						<img 
+							src="/images/meinaeis.jpg" 
+							alt="Trabajo en equipo"
+							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							style="box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);"
+						/>
+					</div>
+					
+					<!-- Contenido -->
+					<h3 class="text-xl font-semibold text-blue-300 mb-3">Trabajo en Equipo</h3>
+					<p class="text-gray-300 leading-relaxed">
+						Habilidad para colaborar efectivamente con otros, compartir responsabilidades y alcanzar objetivos comunes mediante la sinergia grupal.
+					</p>
+				</div>
+			</div>
+
+			<!-- Habilidad 3: Liderazgo -->
+			<div class="group relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-6 border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">
+				<div class="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+				
+				<div class="relative">
+					<!-- Número -->
+					<div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
+						3
+					</div>
+					
+					<!-- Imagen -->
+					<div class="mb-6 overflow-hidden rounded-xl">
+						<img 
+							src="/images/measinstructor.jpg" 
+							alt="Liderazgo"
+							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							style="box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);"
+						/>
+					</div>
+					
+					<!-- Contenido -->
+					<h3 class="text-xl font-semibold text-indigo-300 mb-3">Liderazgo</h3>
+					<p class="text-gray-300 leading-relaxed">
+						Capacidad para guiar, motivar y coordinar equipos hacia el logro de objetivos comunes, inspirando confianza y facilitando el crecimiento del grupo.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Estadísticas o elementos adicionales -->
+		<div class="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-8 border border-purple-500/20">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+				<div class="group hover:scale-105 transition-transform duration-300">
+					<div class="text-3xl font-bold text-purple-400 mb-2">5+</div>
+					<div class="text-gray-300">Años de experiencia en equipos</div>
+				</div>
+				<div class="group hover:scale-105 transition-transform duration-300">
+					<div class="text-3xl font-bold text-blue-400 mb-2">10+</div>
+					<div class="text-gray-300">Proyectos colaborativos</div>
+				</div>
+				<div class="group hover:scale-105 transition-transform duration-300">
+					<div class="text-3xl font-bold text-indigo-400 mb-2">3+</div>
+					<div class="text-gray-300">Equipos liderados</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<div class="max-w-3xl mx-auto my-5 px-5 text-clear">
-		<div class="mb-3">
-			<h2 class="text-xl font-bold text-big-letter mb-2 pt-0">Stack de tecnologías</h2>
+	<div class="max-w-3xl mx-auto mt-8 my-5 px-5 text-clear">
+		<div class="mb-8">
+			<h2 class="text-xl text-center font-bold text-big-letter mb-2 pt-0">Stack de tecnologías</h2>
 		</div>
 		<ul class="list-disc pl-5">
-			<ListItemTechnologies items={icons[0]} title="Lenguajes de desarrollo"></ListItemTechnologies>
-			<ListItemTechnologies items={icons[1]} title="Frameworks de desarrollo"></ListItemTechnologies>
-			<ListItemTechnologies items={icons[2]} title="Otras herramientas"></ListItemTechnologies>
+			<TechnologiesBanner title="Lenguajes" items={icons[0]} />
+			<TechnologiesBanner title="Frameworks" items={icons[1]} />
+			<TechnologiesBanner title="Otras herramientas" items={icons[2]} />
 		</ul>
 	</div>
 </BaseLayout>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const carouselItems = document.querySelectorAll('[data-carousel-item]');
-        const prevButton = document.querySelector('[data-carousel-prev]');
-        const nextButton = document.querySelector('[data-carousel-next]');
-        
-        let currentIndex = 0;
-
-        // Inicializa el carrusel
-        function updateCarousel() {
-            carouselItems.forEach((item, index) => {
-                item.classList.add('hidden');
-                if (index === currentIndex) {
-                    item.classList.remove('hidden');
-                }
-            });
-        }
-
-        // Función para ir al siguiente item
-        function nextItem() {
-            currentIndex = (currentIndex + 1) % carouselItems.length;
-            updateCarousel();
-        }
-
-        // Función para ir al item anterior
-        function prevItem() {
-            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-            updateCarousel();
-        }
-
-        // Event listeners
-        nextButton?.addEventListener('click', nextItem);
-        prevButton?.addEventListener('click', prevItem);
-
-        // Inicializa el carrusel al cargar
-        updateCarousel();
-    });
-</script>

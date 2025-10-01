@@ -17,10 +17,12 @@ const { title, showFooter } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/images/icono.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <meta name="description" content="Este es mi portafolio personal y profesional, ¡pase adelante!">
+    <meta name="author" content="Kattherine Hernandez">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark-blue font-preahvihear mt-32" >
+<body class="bg-dark-blue font-reboto mt-32" >
     <Header/>
     <slot/>
 	{showFooter && <Footer></Footer>}

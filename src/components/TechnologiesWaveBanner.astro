@@ -1,0 +1,186 @@
+---
+import Image from 'astro/components/Image.astro';
+
+export interface Props {
+    title: string,
+    items: { src: string, alt: string }[]
+}
+
+const { title, items } = Astro.props;
+const uniqueId = `tech-wave-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class="text-clear mb-8">
+    <h3 class="text-center mb-6 text-xl font-semibold">{title}</h3>
+    
+    <!-- Contenedor de la cinta con ondas -->
+    <div class="relative overflow-hidden bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-purple-900/30 rounded-xl py-6" id={`container-${uniqueId}`}>
+        <!-- Efecto de ondas de fondo -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        
+        <!-- Cinta de tecnologías -->
+        <div class="relative z-10 flex justify-center" id={`slider-${uniqueId}`}>
+            <!-- Primera fila -->
+            <div class="flex items-center justify-center gap-6 px-4" id={`content-${uniqueId}`}>
+                {items.map((item, index) => (
+                    <div class="flex-shrink-0 transform hover:scale-110 transition-all duration-300" 
+                         style={`animation-delay: ${index * 0.1}s`}>
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+                            <Image
+                                src={item.src}
+                                alt={item.alt}
+                                width={70}
+                                height={70}
+                                class="relative h-14 w-14 object-contain rounded-lg p-2 bg-white/10 backdrop-blur-sm border border-white/20"
+                            />
+                        </div>
+                        <p class="text-xs text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.alt}</p>
+                    </div>
+                ))}
+            </div>
+            <!-- Segunda fila para continuidad (solo si es necesario) -->
+            <div class="items-center gap-6 px-4 hidden" id={`duplicate-${uniqueId}`}>
+                {items.map((item, index) => (
+                    <div class="flex-shrink-0 transform hover:scale-110 transition-all duration-300" 
+                         style={`animation-delay: ${index * 0.1}s`}>
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+                            <Image
+                                src={item.src}
+                                alt={item.alt}
+                                width={70}
+                                height={70}
+                                class="relative h-14 w-14 object-contain rounded-lg p-2 bg-white/10 backdrop-blur-sm border border-white/20"
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script define:vars={{ uniqueId }}>
+    function initWaveBanner() {
+        const container = document.getElementById(`container-${uniqueId}`);
+        const slider = document.getElementById(`slider-${uniqueId}`);
+        const content = document.getElementById(`content-${uniqueId}`);
+        const duplicate = document.getElementById(`duplicate-${uniqueId}`);
+        
+        if (!container || !slider || !content || !duplicate) return;
+        
+        function checkOverflow() {
+            const containerWidth = container.offsetWidth;
+            const contentWidth = content.scrollWidth;
+            
+            // Si el contenido es más ancho que el contenedor
+            if (contentWidth > containerWidth) {
+                // Activar scroll infinito
+                duplicate.classList.remove('hidden');
+                duplicate.classList.add('flex');
+                slider.style.width = '200%';
+                slider.classList.remove('justify-center');
+                slider.classList.add('animate-float');
+                content.style.justifyContent = 'flex-start';
+            } else {
+                // Desactivar scroll, mantener centrado
+                duplicate.classList.add('hidden');
+                duplicate.classList.remove('flex');
+                slider.style.width = 'auto';
+                slider.classList.remove('animate-float');
+                slider.classList.add('justify-center');
+                content.style.justifyContent = 'center';
+            }
+        }
+        
+        // Verificar en carga inicial
+        checkOverflow();
+        
+        // Verificar en cambio de tamaño de ventana
+        window.addEventListener('resize', checkOverflow);
+        
+        // Pausar animación al hacer hover
+        slider.addEventListener('mouseenter', () => {
+            if (slider.classList.contains('animate-float')) {
+                slider.style.animationPlayState = 'paused';
+            }
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            if (slider.classList.contains('animate-float')) {
+                slider.style.animationPlayState = 'running';
+            }
+        });
+    }
+    
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWaveBanner);
+    } else {
+        initWaveBanner();
+    }
+</script>
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .animate-float {
+        animation: float 25s linear infinite;
+        width: 200%;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+        animation: wave 8s ease-in-out infinite;
+    }
+    
+    .wave1 {
+        animation-delay: 0s;
+    }
+    
+    .wave2 {
+        animation-delay: 2s;
+        background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    }
+    
+    .wave3 {
+        animation-delay: 4s;
+        background: linear-gradient(45deg, transparent, rgba(236, 72, 153, 0.1), transparent);
+    }
+    
+    @keyframes wave {
+        0%, 100% {
+            transform: translateX(-100%) skewX(-15deg);
+        }
+        50% {
+            transform: translateX(0%) skewX(15deg);
+        }
+    }
+    
+    /* Pausar en hover */
+    .animate-float:hover {
+        animation-play-state: paused;
+    }
+</style>
