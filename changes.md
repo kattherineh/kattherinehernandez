@@ -5,3 +5,4 @@
 - Principal colors
 - Añadí una sección con mis ideales
 - Cambio en la interfaz de contacto, proyectos y experiencia.
+- Actualicé los proyectos al día de hoy
