@@ -1,13 +1,92 @@
 ---
-import ContactCard from '../components/ContactCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout showFooter={false} title="Contacto">
-    <div class="flex flex-col items-center">
-        <div class="text-big-letter mb-10 mt-5">Contáctame</div>
-        <ContactCard src='/images/github.svg' alt='Logo Github' text='katerinmayely' href='https://github.com/katerinmayely' target='_blank'></ContactCard>
-        <ContactCard src='/images/correo.png' alt='Logo correo' text='katerinmayely@gmail.com' href='mailto:katerinmayely@gmail.com' target=''></ContactCard>
-        <ContactCard src='/images/linkedin.png' alt='Logo Linkedin' text='Kattherine Hernandez' href='https://www.linkedin.com/in/kattherine-hernandez-6a1a85275?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BH3qLHQTYQueNavQic%2BX2pQ%3D%3D' target='_blank'></ContactCard>
+<BaseLayout showFooter={false} title="Contacto | Kattherine Hernandez">
+    <div class="max-w-6xl mx-auto px-5 py-12 text-clear">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
+                Contáctame
+            </h1>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- GitHub Card -->
+            <div class="group relative bg-gradient-to-br from-gray-900/50 to-purple-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-gray-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src="/images/github.svg" alt="GitHub" class="w-8 h-8 filter brightness-90 group-hover:brightness-110" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-300 mb-2">GitHub</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Revisa mis proyectos y código</p>
+                    <a href="https://github.com/kattherineh" target="_blank" 
+                       class="inline-block bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+                        @kattherineh
+                    </a>
+                </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="group relative bg-gradient-to-br from-blue-900/50 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src="/images/correo.png" alt="Email" class="w-8 h-8 filter brightness-90 group-hover:brightness-110" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Email</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Conversemos sobre oportunidades</p>
+                    <a href="mailto:kattherinehernandezs@gmail.com" target=""
+                       class="inline-block bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+                        Enviar mensaje
+                    </a>
+                </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="group relative bg-gradient-to-br from-indigo-900/50 to-purple-900/30 rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20 md:col-span-2 lg:col-span-1">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src="/images/linkedin.png" alt="LinkedIn" class="w-8 h-8 filter brightness-90 group-hover:brightness-110" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-300 mb-2">LinkedIn</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Conectemos profesionalmente</p>
+                    <a href="https://www.linkedin.com/in/kattherine-mayely-hernandez-6a1a85275" target="_blank" 
+                       class="inline-block bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+                        Conectar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-8 border border-purple-500/20 text-center">
+            <h2 class="text-2xl font-semibold text-purple-300 mb-4">¿Tienes un proyecto en mente?</h2>
+            <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Me encanta trabajar en proyectos desafiantes y colaborar con equipos apasionados. 
+                Si tienes una idea o necesitas ayuda con desarrollo de software, ¡no dudes en escribirme!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                <span class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    Disponible para proyectos
+                </span>
+                <span class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    Disponible de domingo a viernes
+                </span>
+                <span class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    Colaboración remota
+                </span>
+            </div>
+        </div>
     </div>
 </BaseLayout>

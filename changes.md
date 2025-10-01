@@ -4,3 +4,4 @@
 - Presentation Updated
 - Principal colors
 - Añadí una sección con mis ideales
+- Cambio en la interfaz de contacto, proyectos y experiencia.

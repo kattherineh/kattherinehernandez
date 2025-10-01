@@ -4,7 +4,6 @@ import InfoCard from '../components/InfoCard.astro';
 import pages from './data/pages_info.json' assert { type: 'json' };
 
 export async function getStaticPaths() {
-
     return pages.map(({ type_info, items}) => {
         return {
             params: { type_info },
@@ -15,14 +14,75 @@ export async function getStaticPaths() {
 
 const {items} = Astro.props;
 const {type_info} = Astro.params;
+
+// Configuración de títulos y descripciones
+const pageConfig = {
+    projects: {
+        title: "Mis Proyectos",
+        subtitle: "Portafolio de Desarrollo",
+        description: "Una colección de proyectos que demuestran mis habilidades en desarrollo de software, desde aplicaciones web hasta soluciones de infraestructura en la nube."
+    },
+    experience: {
+        title: "Mi Experiencia",
+        subtitle: "Trayectoria Profesional",
+        description: "Un recorrido por mis experiencias laborales, capacitaciones y logros que han moldeado mi carrera en tecnología."
+    }
+};
+
+const config = pageConfig[type_info as keyof typeof pageConfig] || {
+    title: type_info,
+    subtitle: "Información",
+    description: "Contenido relacionado con mi desarrollo profesional."
+};
 ---
 
-<BaseLayout showFooter={false} title={type_info}>
-    <div class="max-w-3xl mx-auto">
-        {
-            items.map((item) => (
-                <InfoCard href={`/${type_info}-${item.mdx}`} description={item.description} title={item.title}></InfoCard>
-            ))
-        }
+<BaseLayout showFooter={false} title={`${config.title} | Kattherine Hernandez`}>
+    <div class="max-w-6xl mx-auto px-5 py-12 text-clear">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <div class="mb-4">
+                <span class="text-lg font-medium text-purple-400 uppercase tracking-wider">
+                    {config.subtitle}
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
+                {config.title}
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                {config.description}
+            </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-xl p-6 border border-purple-500/20">
+                <div class="text-3xl font-bold text-purple-400 mb-2">{items.length}</div>
+                <div class="text-gray-300">{type_info === 'projects' ? 'Proyectos' : 'Experiencias'}</div>
+            </div>
+            <div class="text-center bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-xl p-6 border border-blue-500/20">
+                <div class="text-3xl font-bold text-blue-400 mb-2">
+                    {type_info === 'projects' ? '7+' : '5+'}
+                </div>
+                <div class="text-gray-300">{type_info === 'projects' ? 'Tecnologías' : 'Habilidades'}</div>
+            </div>
+            <div class="text-center bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-xl p-6 border border-indigo-500/20">
+                <div class="text-3xl font-bold text-indigo-400 mb-2">2025</div>
+                <div class="text-gray-300">Año activo</div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {items.map((item, index) => (
+                <InfoCard 
+                    href={`/${type_info}-${item.mdx}`} 
+                    description={item.description} 
+                    title={item.title}
+                    index={index}
+                    type={type_info}
+                    date={item.date}
+                />
+            ))}
+        </div>
     </div>
 </BaseLayout>
