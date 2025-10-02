@@ -42,12 +42,9 @@ const config = pageConfig[type_info as keyof typeof pageConfig] || {
         <div class="text-center mb-16">
             <div class="mb-4">
                 <span class="text-lg font-medium text-purple-400 uppercase tracking-wider">
-                    {config.subtitle}
+                    {config.title}
                 </span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                {config.title}
-            </h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 {config.description}
             </p>

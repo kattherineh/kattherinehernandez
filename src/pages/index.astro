@@ -21,21 +21,16 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
 			
 			<!-- Habilidad 1: Comunicación Efectiva -->
-			<div class="group relative bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-				<div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+			<div class="group relative bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-6 border border-purple-500/20  transition-all duration-500 ">
+				<div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 rounded-2xl opacity-0 "></div>
 				
 				<div class="relative">
-					<!-- Número -->
-					<div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
-						1
-					</div>
-					
 					<!-- Imagen -->
 					<div class="mb-6 overflow-hidden rounded-xl">
 						<img 
 							src="/images/meinpublic.jpg" 
 							alt="Comunicación efectiva"
-							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							class="w-full h-48 object-cover transition-transform duration-500"
 							style="box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3);"
 						/>
 					</div>
@@ -49,21 +44,17 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 			</div>
 
 			<!-- Habilidad 2: Trabajo en Equipo -->
-			<div class="group relative bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+			<div class="group relative bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-500/20  transition-all duration-500">
+				<div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-2xl opacity-0 "></div>
 				
 				<div class="relative">
-					<!-- Número -->
-					<div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
-						2
-					</div>
 					
 					<!-- Imagen -->
 					<div class="mb-6 overflow-hidden rounded-xl">
 						<img 
 							src="/images/meinaeis.jpg" 
 							alt="Trabajo en equipo"
-							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							class="w-full h-48 object-cover transition-transform duration-500"
 							style="box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);"
 						/>
 					</div>
@@ -77,21 +68,17 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 			</div>
 
 			<!-- Habilidad 3: Liderazgo -->
-			<div class="group relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-6 border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">
-				<div class="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+			<div class="group relative bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-6 border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-500">
+				<div class="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-2xl opacity-0 "></div>
 				
 				<div class="relative">
-					<!-- Número -->
-					<div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 group-hover:animate-pulse">
-						3
-					</div>
 					
 					<!-- Imagen -->
 					<div class="mb-6 overflow-hidden rounded-xl">
 						<img 
 							src="/images/measinstructor.jpg" 
 							alt="Liderazgo"
-							class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+							class="w-full h-48 object-cover transition-transform duration-500"
 							style="box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);"
 						/>
 					</div>
@@ -108,15 +95,15 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 		<!-- Estadísticas o elementos adicionales -->
 		<div class="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-8 border border-purple-500/20">
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-				<div class="group hover:scale-105 transition-transform duration-300">
+				<div>
 					<div class="text-3xl font-bold text-purple-400 mb-2">5+</div>
 					<div class="text-gray-300">Años de experiencia en equipos</div>
 				</div>
-				<div class="group hover:scale-105 transition-transform duration-300">
+				<div>
 					<div class="text-3xl font-bold text-blue-400 mb-2">10+</div>
 					<div class="text-gray-300">Proyectos colaborativos</div>
 				</div>
-				<div class="group hover:scale-105 transition-transform duration-300">
+				<div>
 					<div class="text-3xl font-bold text-indigo-400 mb-2">3+</div>
 					<div class="text-gray-300">Equipos liderados</div>
 				</div>
@@ -146,7 +133,7 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 			</p>
 		</div>
 
-		<div class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20">
+		<div class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20  transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 				
 				<!-- Contenido de texto -->
@@ -168,7 +155,7 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 							<img 
 								src="/images/meinclub.jpg" 
 								alt="Experiencias profesionales"
-								class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+								class="w-full h-48 object-cover transition-transform duration-500"
 								style="box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3);"
 							/>
 						</div>
@@ -176,7 +163,7 @@ import TechnologiesBanner from "../components/TechnologiesBanner.astro";
 							<img 
 								src="/images/measconqui.jpg" 
 								alt="Crecimiento personal"
-								class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+								class="w-full h-48 object-cover transition-transform duration-500"
 								style="box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);"
 							/>
 						</div>

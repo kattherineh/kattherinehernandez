@@ -57,52 +57,58 @@
         "type_info": "experience",
         "items": [
             {
+                "title": "Cibersecurity Awareness, Certiprof",
+                "description": "Al completar el curso de Cibersecurity Awareness, he refrescado mis conocimientos de los conceptos y prácticas de ciberseguridad. Puedo ofrecer a la industria la capacidad de identificar y mitigar riesgos de seguridad en entornos digitales.",
+                "mdx": "ciber2025",
+                "date": "Agosto 2025"
+            },
+            {
                 "title": "Becaria del programa Mujer Digital (JA Americas)",
                 "description": "Mujer Digital es un programa de capacitación y empleabilidad diseñado para promover la participación femenina en la economía digital. Me enteré de esta iniciativa a través de las redes sociales y, motivada por la experiencia positiva de algunas compañeras de la universidad que ya formaban parte, decidí aplicar en febrero de 2024.",
                 "mdx": "mujer_digital",
-                "date": "Febrero 2024 - Presente"
-            },
-            {
-                "title": "Python Essentials 1, Cisco",
-                "description": "Al completar el curso de Python Essentials 1, he adquirido habilidades fundamentales en programación que me permiten contribuir al desarrollo de software. Mis conocimientos abarcan desde los conceptos básicos hasta la creación de aplicaciones simples en Python, lo que me posiciona como una desarrolladora en formación.",
-                "mdx": "python1",
-                "date": "Marzo 2024"
-            },
-            {
-                "title": "Python Essentials 2, Cisco",
-                "description": "Como profesional en desarrollo de software, ofrezco una sólida base en Python, respaldada por las habilidades adquiridas en el curso de Python Avanzado.",
-                "mdx": "python2",
-                "date": "Abril 2024"
-            },
-            {
-                "title": "Introducción a la Ciberseguridad, Cisco",
-                "description": "Este curso introductorio de Ciberseguridad me proporcionó una comprensión sólida de los conceptos fundamentales para proteger mi vida digital y conocer los principales desafíos de seguridad que enfrentan empresas, gobiernos e instituciones educativas.",
-                "mdx": "ciberseguridad",
-                "date": "Mayo 2024"
+                "date": "Febrero 2025"
             },
             {
                 "title": "JavaScript Moderno, Udemy",
                 "description": "Al completar el curso de JavaScript moderno, he adquirido una comprensión fundamental del lenguaje y sus aplicaciones. Puedo ofrecer a la industria la capacidad de desarrollar aplicaciones web desde cero, utilizando conceptos básicos como tipos de datos, objetos y manipulación del DOM.",
                 "mdx": "javascript",
-                "date": "Junio 2024"
-            },
-            {
-                "title": "Explorando tecnologías emergentes, IBM",
-                "description": "A lo largo de mi formación, he completado varios cursos en áreas clave de tecnología, incluyendo Cloud Computing, Inteligencia Artificial, Ciberseguridad, Ciencia de Datos, Blockchain e Internet de las Cosas (IoT).",
-                "mdx": "tecnologias",
-                "date": "Agosto 2024"
+                "date": "Septiembre 2024"
             },
             {
                 "title": "Fundamentos de programación, Udemy",
                 "description": "Después de completar el curso de Fundamentos de Programación, tengo una sólida comprensión de las bases del desarrollo de software.",
                 "mdx": "fundamentos",
-                "date": "Enero 2024"
+                "date": "Julio 2024"
+            },
+            {
+                "title": "Python Essentials 2, Cisco",
+                "description": "Como profesional en desarrollo de software, ofrezco una sólida base en Python, respaldada por las habilidades adquiridas en el curso de Python Avanzado.",
+                "mdx": "python2",
+                "date": "Julio 2024"
             },
             {
                 "title": "Git y Github de cero a experto, Udemy",
                 "description": "Al finalizar el curso de Git, he desarrollado una comprensión sólida de esta herramienta esencial en el desarrollo de software. Aprendí a instalar y utilizar Git de manera efectiva, tanto en entornos gráficos como en la terminal, lo que me permite gestionar proyectos de manera más organizada.",
                 "mdx": "github",
-                "date": "Febrero 2024"
+                "date": "Julio 2024"
+            },
+            {
+                "title": "Explorando tecnologías emergentes, IBM",
+                "description": "A lo largo de mi formación, he completado varios cursos en áreas clave de tecnología, incluyendo Cloud Computing, Inteligencia Artificial, Ciberseguridad, Ciencia de Datos, Blockchain e Internet de las Cosas (IoT).",
+                "mdx": "tecnologias",
+                "date": "Junio 2024"
+            },
+            {
+                "title": "Introducción a la Ciberseguridad, Cisco",
+                "description": "Este curso introductorio de Ciberseguridad me proporcionó una comprensión sólida de los conceptos fundamentales para proteger mi vida digital y conocer los principales desafíos de seguridad que enfrentan empresas, gobiernos e instituciones educativas.",
+                "mdx": "ciberseguridad",
+                "date": "Abril 2024"
+            },
+            {
+                "title": "Python Essentials 1, Cisco",
+                "description": "Al completar el curso de Python Essentials 1, he adquirido habilidades fundamentales en programación que me permiten contribuir al desarrollo de software. Mis conocimientos abarcan desde los conceptos básicos hasta la creación de aplicaciones simples en Python, lo que me posiciona como una desarrolladora en formación.",
+                "mdx": "python1",
+                "date": "Septiembre 2023"
             }
         ]
     }
