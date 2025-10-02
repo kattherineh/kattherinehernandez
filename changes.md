@@ -13,3 +13,4 @@
 - Updating experiences
 - Adding certificates and badges
 - CV updated
+- Soft Skills Grid Component

@@ -1,0 +1,17 @@
+---
+import GridItemHabilidadesBlandas from "./GridItemHabilidadesBlandas.astro"
+import softskills from '../pages/data/softskills.json' assert { type: 'json' };
+
+---
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+
+    {softskills.map(skill => (
+        <GridItemHabilidadesBlandas
+            title={skill.title}
+            text={skill.text}
+            src={skill.src}
+            alt={skill.alt}
+            classAdd="transition-transform duration-500"
+        />
+    ))}
+</div>

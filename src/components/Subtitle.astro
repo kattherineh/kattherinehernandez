@@ -1,0 +1,19 @@
+---
+export interface Props {
+    title: string,
+    text: string,
+    gradientFrom: string,
+    gradientTo: string
+}
+
+const { title, text, gradientFrom, gradientTo } = Astro.props;
+---
+
+<div class="mb-12 text-center">
+    <h5 class={`text-xl font-bold text-big-letter mb-4 bg-gradient-to-r from-${gradientFrom} to-${gradientTo} bg-clip-text text-transparent`}>
+        {title}
+    </h5>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        {text}
+    </p>
+</div>

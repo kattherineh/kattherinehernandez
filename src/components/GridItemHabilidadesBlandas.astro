@@ -1,0 +1,33 @@
+---
+export interface Props {
+    title: string,
+    text: string,
+    src: string,
+    alt: string,
+    classAdd: string
+}
+
+const {title, text, src, alt, classAdd} = Astro.props;
+---
+
+<div class="group relative bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-2xl p-6 border border-purple-500/20  transition-all duration-500 ">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 rounded-2xl opacity-0 "></div>
+        
+        <div class="relative">
+            <!-- Imagen -->
+            <div class="mb-6 overflow-hidden rounded-xl">
+                <img 
+                    src={src} 
+                    alt={alt}
+                    class={`w-full h-48 object-cover transition-transform duration-500 ${classAdd}`}
+                    style="box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3);"
+                />
+            </div>
+            
+            <!-- Contenido -->
+            <h3 class="text-xl font-semibold text-purple-300 mb-3">{title}</h3>
+            <p class="text-gray-300 leading-relaxed">
+                {text}
+            </p>
+        </div>
+    </div>

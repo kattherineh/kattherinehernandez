@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Comunicación Efectiva",
+        "text": "Capacidad para expresar ideas claramente y escuchar activamente a los demás, facilitando el intercambio de información y la colaboración.",
+        "src": "/images/meinpublic.jpg",
+        "alt": "Comunicación efectiva",
+        "classAdd": "transition-transform duration-500"
+    },
+    {
+        "title": "Trabajo en Equipo",
+        "text": "Capacidad para colaborar efectivamente con otros, compartir responsabilidades y alcanzar objetivos comunes mediante la sinergia grupal.",
+        "src": "/images/meinaeis.jpg",
+        "alt": "Trabajo en equipo",
+        "classAdd": "transition-transform duration-500"
+
+    },
+    {
+        "title": "Liderazgo",
+        "text": "Capacidad para guiar, motivar y coordinar equipos hacia el logro de objetivos comunes, inspirando confianza y facilitando el crecimiento del grupo.",
+        "src": "/images/measinstructor.jpg",
+        "alt": "Liderazgo",
+        "classAdd": "transition-transform duration-500"
+
+    }
+]
