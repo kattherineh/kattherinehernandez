@@ -23,8 +23,6 @@ const gradients = [
 
 const gradientClass = gradients[index % gradients.length];
 
-// Iconos temáticos según el tipo
-const icon = type === 'projects' ? '🚀' : '🎯';
 ---
 
 <a href={href} class="group block">
@@ -36,17 +34,11 @@ const icon = type === 'projects' ? '🚀' : '🎯';
         <div class="relative">
             <!-- Header -->
             <div class="flex items-start justify-between mb-4">
-                <div class="text-2xl mb-2">{icon}</div>
-                <div class="flex flex-col items-end gap-2">
-                    <div class="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded-full">
-                        {type === 'projects' ? 'Proyecto' : 'Experiencia'}
+                {date && (
+                    <div class="ml-auto text-xs text-purple-300 bg-purple-500/20 px-2 py-1 rounded-full border border-purple-500/30">
+                        📅 {date}
                     </div>
-                    {date && (
-                        <div class="text-xs text-purple-300 bg-purple-500/20 px-2 py-1 rounded-full border border-purple-500/30">
-                            📅 {date}
-                        </div>
-                    )}
-                </div>
+                )}
             </div>
             
             <!-- Título -->
