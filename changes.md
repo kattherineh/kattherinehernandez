@@ -14,3 +14,6 @@
 - Adding certificates and badges
 - CV updated
 - Soft Skills Grid Component
+- Updated index.astro
+- Componentizando el código
+- Contact me Updated

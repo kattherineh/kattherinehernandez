@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InfoCard from '../components/InfoCard.astro';
+import SecondHeader from '../components/SecondHeader.astro';
 import pages from './data/pages_info.json' assert { type: 'json' };
 
 export async function getStaticPaths() {
@@ -39,16 +40,8 @@ const config = pageConfig[type_info as keyof typeof pageConfig] || {
 <BaseLayout showFooter={false} title={`${config.title} | Kattherine Hernandez`}>
     <div class="max-w-6xl mx-auto px-5 py-12 text-clear">
         <!-- Header Section -->
-        <div class="text-center mb-16">
-            <div class="mb-4">
-                <span class="text-lg font-medium text-purple-400 uppercase tracking-wider">
-                    {config.title}
-                </span>
-            </div>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                {config.description}
-            </p>
-        </div>
+        <SecondHeader title={config.title} text={config.subtitle} />
+    
 
         <!-- Stats Section -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">

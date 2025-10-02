@@ -1,26 +1,29 @@
 ---
-import Image from "astro/components/Image.astro"
-
 export interface Props{
     src: string,
     alt: string,
+    username: string,
+    title: string,
     text: string,
     href: string,
     target: string
 }
 
-const {src, alt, text, href, target} = Astro.props;
+const {src, alt, text, href, target, username, title} = Astro.props;
 ---
 
-<a style="display: flex; justify-content: start; width: 35%;" class="text-clear p-2" href={href} target={target}>
-    <div class="">
-        <Image
-            src={src}
-            alt={alt}
-            width={100}
-            height={100}
-            class="h-8 w-auto rounded-full"
-        />
+<div class="group relative bg-gradient-to-br from-gray-900/50 to-purple-900/30 rounded-2xl p-8 border border-purple-500/20">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-gray-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    
+    <div class="relative text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src={src} alt={alt} class="w-8 h-8 filter brightness-90 group-hover:brightness-110" />
+        </div>
+        <h3 class="text-xl font-semibold text-purple-300 mb-2">{title}</h3>
+        <p class="text-gray-400 mb-4 text-sm">{text}</p>
+        <a href={href} target={target} 
+            class="inline-block bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+            {username}
+        </a>
     </div>
-    <div class="ml-10">{text}</div>
-</a>
+</div>
