@@ -8,6 +8,12 @@
                 "mdx": "vinculation_unah_fi",
                 "date": "Agosto 2025"
             },
+             {
+                "title": "U-Mandaditos Backend",
+                "description": "Sistema desarrollado para poner en práctica lo aprendido sobre principios SOLID, Clean Architecture e integración continua mediante workflows de Github.",
+                "mdx": "umandaditos",
+                "date": "Mayo 2025"
+            },
             {
                 "title": "Sistema de Autenticación desplegado en Azure",
                 "description": "Registro e inicio de sesión de usuarios auxiliado del servicio de Google, Firebase. En este proyecto realizo la simulación de un sistema básico para que el usuario pueda visualizar el movimiento de sus cuentas financieras a través de transacciones.",
