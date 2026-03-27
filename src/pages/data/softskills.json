@@ -1,14 +1,14 @@
 [
     {
         "title": "Comunicación Efectiva",
-        "text": "Capacidad para expresar ideas claramente y escuchar activamente a los demás, facilitando el intercambio de información y la colaboración.",
+        "text": "Disfruto hablar a los demás sobre temas que me apasionan, como la tecnología y la programación. Procuro siempre compartir mis conocimientos y experiencias con otros, ya sea a través de presentaciones o conversaciones informales. Creo que la comunicación efectiva es clave para transmitir ideas de manera clara y conectar con los demás, lo que me motiva a seguir mejorando mis habilidades de comunicación.",
         "src": "/images/meinpublic.jpg",
         "alt": "Comunicación efectiva",
         "classAdd": "transition-transform duration-500"
     },
     {
         "title": "Trabajo en Equipo",
-        "text": "Capacidad para colaborar efectivamente con otros, compartir responsabilidades y alcanzar objetivos comunes mediante la sinergia grupal.",
+        "text": "Me gusta mucho trabajar en equipo y me adapto facilmente a diferentes roles dentro de un grupo. Disfruto colaborar con otros, compartir ideas y aprender de las perspectivas de los demás. Creo que el trabajo en equipo es fundamental para lograr objetivos comunes y me esfuerzo por contribuir de manera positiva al ambiente de trabajo, fomentando la cooperación y el respeto mutuo.",
         "src": "/images/meinaeis.jpg",
         "alt": "Trabajo en equipo",
         "classAdd": "transition-transform duration-500"
@@ -16,7 +16,7 @@
     },
     {
         "title": "Liderazgo",
-        "text": "Capacidad para guiar, motivar y coordinar equipos hacia el logro de objetivos comunes, inspirando confianza y facilitando el crecimiento del grupo.",
+        "text": "Considero que el liderazgo implica inspirar y guiar a otros hacia la consecución de objetivos comunes, fomentando un ambiente de trabajo positivo y estimulante. Me esfuerzo por fortalecer mis habilidades de liderazgo, procurando siempre ser un ejemplo a seguir, motivar a los demás y promover la colaboración dentro del equipo.",
         "src": "/images/measinstructor.jpg",
         "alt": "Liderazgo",
         "classAdd": "transition-transform duration-500"

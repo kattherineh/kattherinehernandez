@@ -16,6 +16,11 @@
 			"row": 1
 		},
 		{
+			"src": "/images/csharp.avif",
+			"alt": "img csharp",
+			"row": 1
+		},
+		{
 			"src": "/images/html5.svg",
 			"alt": "img html",
 			"row": 2
@@ -40,6 +45,11 @@
 		{
 			"src": "/images/astro.png",
 			"alt": "img astro",
+			"row": 1
+		},
+		{
+			"src": "/images/dotnet.png",
+			"alt": "img dotnet",
 			"row": 1
 		},
 		{
