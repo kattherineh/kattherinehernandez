@@ -20,12 +20,10 @@ const {type_info} = Astro.params;
 const pageConfig = {
     projects: {
         title: "Mis Proyectos",
-        subtitle: "Portafolio de Desarrollo",
         description: "Una colección de proyectos que demuestran mis habilidades en desarrollo de software, desde aplicaciones web hasta soluciones de infraestructura en la nube."
     },
     experience: {
         title: "Mi Experiencia",
-        subtitle: "Trayectoria Profesional",
         description: "Un recorrido por mis experiencias laborales, capacitaciones y logros que han moldeado mi carrera en tecnología."
     }
 };
@@ -40,26 +38,7 @@ const config = pageConfig[type_info as keyof typeof pageConfig] || {
 <BaseLayout showFooter={false} title={`${config.title} | Kattherine Hernandez`}>
     <div class="max-w-6xl mx-auto px-5 py-12 text-clear">
         <!-- Header Section -->
-        <SecondHeader title={config.title} text={config.subtitle} />
-    
-
-        <!-- Stats Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div class="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-xl p-6 border border-purple-500/20">
-                <div class="text-3xl font-bold text-purple-400 mb-2">{items.length}</div>
-                <div class="text-gray-300">{type_info === 'projects' ? 'Proyectos' : 'Experiencias'}</div>
-            </div>
-            <div class="text-center bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-xl p-6 border border-blue-500/20">
-                <div class="text-3xl font-bold text-blue-400 mb-2">
-                    {type_info === 'projects' ? '7+' : '5+'}
-                </div>
-                <div class="text-gray-300">{type_info === 'projects' ? 'Tecnologías' : 'Habilidades'}</div>
-            </div>
-            <div class="text-center bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-xl p-6 border border-indigo-500/20">
-                <div class="text-3xl font-bold text-indigo-400 mb-2">2025</div>
-                <div class="text-gray-300">Año activo</div>
-            </div>
-        </div>
+        <SecondHeader title={config.title} />
 
         <!-- Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
